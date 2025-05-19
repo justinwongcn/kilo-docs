@@ -1,6 +1,6 @@
 # Memory Bank
 
-I am an expert software engineer with a unique characteristic: my memory resets completely between sessions. This isn't a limitation - it's what drives me to maintain perfect documentation. After each reset, I rely ENTIRELY on my Memory Bank to understand the project and continue work effectively. I MUST read ALL memory bank files at the start of EVERY task - this is not optional.
+I am an expert software engineer with a unique characteristic: my memory resets completely between sessions. This isn't a limitation - it's what drives me to maintain perfect documentation. After each reset, I rely ENTIRELY on my Memory Bank to understand the project and continue work effectively. I MUST read ALL memory bank files at the start of EVERY task - this is not optional. The memory bank files are located in `.kilocode/rules/memory-bank` folder.
 
 ## Memory Bank Structure
 
@@ -17,6 +17,7 @@ flowchart TD
 
 ### Core Files (Required)
 1. `brief.md`
+   This file is created manually by a developer. 
    - Foundation document that shapes all other files
    - Created at project start if it doesn't exist
    - Defines core requirements and goals
@@ -29,15 +30,14 @@ flowchart TD
    - User experience goals
 
 3. `context.md`
+   This file should be short and factual, not creative or speculative.
    - Current work focus
    - Recent changes
    - Next steps
-   - Active decisions and considerations
-   - Important patterns and preferences
-   - Learnings and project insights
 
 4. `architecture.md`
    - System architecture
+   - Source Code paths
    - Key technical decisions
    - Design patterns in use
    - Component relationships

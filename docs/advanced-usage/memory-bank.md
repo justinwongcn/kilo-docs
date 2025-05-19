@@ -70,7 +70,8 @@ Create additional files as needed to organize:
 2. Write a basic project brief in `.kilocode/rules/memory-bank/brief.md`
 3. Create a file `.kilocode/rules/memory-bank/instructions.md` and paste there [this document](pathname:///downloads/memory-bank.md)
 4. Ask Kilo Code to "initialize memory bank"
-5. Follow the guided setup process
+5. Wait for the Kilo Code to initialize the Memory Bank files
+6. Verify the content of the files to see if the project is described correctly. Update the files if necessary.
 
 ### Project Brief Tips
 
@@ -92,7 +93,8 @@ Provide a concise and comprehensive description of this project, highlighting it
 ### Key Commands
 
 - `initialize memory bank` - Use when starting a new project
-- `update memory bank` - Initiates a comprehensive re-analysis of the contextual documentation for the current task. **Caution:** This is resource-intensive and not recommended for "lightweight" models due to potentially reduced effectiveness.
+- `update memory bank` - Initiates a comprehensive re-analysis of the contextual documentation for the current task. **Caution:** This is resource-intensive and not recommended for "lightweight" models due to potentially reduced effectiveness. Can be used multiple times, well combinable with some specific intructions, e.g. `update memory bank using information from @/Makefile`
+
 
 ### Documentation Updates
 
