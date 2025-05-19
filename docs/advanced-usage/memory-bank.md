@@ -21,6 +21,7 @@ Files are organized in a hierarchical structure that builds a complete picture o
 ## Core Memory Bank Files
 
 ### brief.md
+*This file is created and maintained manually*
 - The foundation of your project
 - High-level overview of what you're building
 - Core requirements and goals
@@ -67,7 +68,7 @@ Create additional files as needed to organize:
 
 1. Create a `.kilocode/rules/memory-bank/` folder in your project
 2. Write a basic project brief in `.kilocode/rules/memory-bank/brief.md`
-3. Create a file `.kilocode/rules/memory-bank/memory-bank.md` and paste there [this document](pathname:///downloads/memory-bank.md)
+3. Create a file `.kilocode/rules/memory-bank/instructions.md` and paste there [this document](pathname:///downloads/memory-bank.md)
 4. Ask Kilo Code to "initialize memory bank"
 5. Follow the guided setup process
 
@@ -78,6 +79,12 @@ Create additional files as needed to organize:
 - Kilo Code will help fill in gaps and ask questions
 - You can update it as your project evolves
 
+Sample prompt that delivers a reasonably good brief:
+
+```
+Provide a concise and comprehensive description of this project, highlighting its main objectives, key features, used technologies and significance. Then, write this description into a text file named appropriately to reflect the project's content, ensuring clarity and professionalism in the writing. Stay brief and short.
+```
+
 ## Working with Memory Bank
 
 ### Core Workflows
@@ -85,7 +92,7 @@ Create additional files as needed to organize:
 ### Key Commands
 
 - `initialize memory bank` - Use when starting a new project
-- `update memory bank` - Triggers a full documentation review and update during a task
+- `update memory bank` - Initiates a comprehensive re-analysis of the contextual documentation for the current task. **Caution:** This is resource-intensive and not recommended for "lightweight" models due to potentially reduced effectiveness.
 
 ### Documentation Updates
 

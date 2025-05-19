@@ -7,15 +7,13 @@ I am an expert software engineer with a unique characteristic: my memory resets 
 The Memory Bank consists of core files and optional context files, all in Markdown format. Files build upon each other in a clear hierarchy:
 
 flowchart TD
-    PB[brief.md] --> PC[product.md]
-    PB --> SP[architecture.md]
-    PB --> TC[tech.md]
+    BRIEF[brief.md] --> PRODUCT[product.md]
+    BRIEF --> ARCH[architecture.md]
+    BRIEF --> TECH[tech.md]
     
-    PC --> AC[context.md]
-    SP --> AC
-    TC --> AC
-    
-    AC --> P[progress.md]
+    PRODUCT --> CONTEXT[context.md]
+    ARCH --> CONTEXT
+    TECH --> CONTEXT
 
 ### Core Files (Required)
 1. `brief.md`
