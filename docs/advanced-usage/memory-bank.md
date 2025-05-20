@@ -2,6 +2,13 @@
 
 ## Overview
 
+<figure style={{ float: 'right', width: '40%', maxWidth: '350px', margin: '0 0 10px 20px' }}>
+  <img src="/docs/img/memory-bank/at-work.png" alt="Executing task with the memory bank" style={{ border: '1px solid grey', borderRadius: '5px', width: '100%' }} />
+  <figcaption style={{ fontSize: '0.9rem', color: '#666', marginTop: '8px', textAlign: 'center' }}>
+    Kilo Code works more efficiently with Memory Bank enabled, instantly understanding project context and technologies.
+  </figcaption>
+</figure>
+
 Memory Bank is a system of structured documentation that enables Kilo Code to **better understand project** and **maintain context across coding sessions**. It transforms your AI assistant from a stateless tool into a persistent development partner with perfect recall of your project details. Kilo Code automatically reads your Memory Bank files to rebuild its understanding of your project whenever you start a new session.
 
 ## Key Benefits
@@ -67,11 +74,13 @@ Create additional files as needed to organize:
 ### First-Time Setup
 
 1. Create a `.kilocode/rules/memory-bank/` folder in your project
-2. Write a basic project brief in `.kilocode/rules/memory-bank/brief.md`
-3. Create a file `.kilocode/rules/memory-bank/instructions.md` and paste there [this document](pathname:///downloads/memory-bank.md)
-4. Ask Kilo Code to "initialize memory bank"
-5. Wait for the Kilo Code to initialize the Memory Bank files
-6. Verify the content of the files to see if the project is described correctly. Update the files if necessary.
+1. Write a basic project brief in `.kilocode/rules/memory-bank/brief.md`
+1. Create a file `.kilocode/rules/memory-bank-instructions.md` and paste there [this document](pathname:///downloads/memory-bank.md)
+1. Switch to `Architect` mode
+1. Check if a best available AI model is selected, don't use "lightweight" models
+1. Ask Kilo Code to "initialize memory bank"
+1. Wait for the Kilo Code to initialize the Memory Bank files
+1. Verify the content of the files to see if the project is described correctly. Update the files if necessary.
 
 ### Project Brief Tips
 
