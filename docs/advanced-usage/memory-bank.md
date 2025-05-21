@@ -126,14 +126,20 @@ Provide a concise and comprehensive description of this project, highlighting it
 
 #### Memory Bank Initialization
 
-When you request initialization of the memory bank with the command `initialize memory bank`, Kilo Code will:
+The initialization step is critically important as it establishes the foundation for all future interactions with your project. When you request initialization with the command `initialize memory bank`, Kilo Code will:
 
-1. Analyze your project, including source code, configuration files, build tools configuration, and other resources
-2. Create required memory bank files in the `.kilocode/rules/memory-bank` folder
-3. Provide a brief summary of what it has understood about your project
+1. Perform an exhaustive analysis of your project, including:
+   - All source code files and their relationships
+   - Configuration files and build system setup
+   - Project structure and organization patterns
+   - Documentation and comments
+   - Dependencies and external integrations
+   - Testing frameworks and patterns
+2. Create comprehensive memory bank files in the `.kilocode/rules/memory-bank` folder
+3. Provide a detailed summary of what it has understood about your project
 4. Ask you to verify the accuracy of the generated files
 
-This process creates the foundation for all future interactions with your project.
+**Important**: Take time to carefully review and correct the generated files after initialization. Any misunderstandings or missing information at this stage will affect all future interactions. A thorough initialization dramatically improves Kilo Code's effectiveness, while a rushed or incomplete initialization will permanently limit its ability to assist you effectively.
 
 #### Memory Bank Updates
 

@@ -55,9 +55,19 @@ Create additional files/folders within memory-bank/ when they help organize:
 
 ### Memory Bank Initialization
 
-When user requests initialization of the memory bank (command `initialize memory bank`), I'll analyze the project, including source code, configuration files, build tools configuration, and other resources, and create required memory bank files in the memory bank folder.
+The initialization step is CRITICALLY IMPORTANT and must be done with extreme thoroughness as it defines all future effectiveness of the Memory Bank. This is the foundation upon which all future interactions will be built.
 
-After initialization, I will ask the user to read through the memory bank files and verify product description, used technologies and other information. I should provide a brief summary of what I've understood about the project to help the user verify the accuracy of the memory bank files.
+When user requests initialization of the memory bank (command `initialize memory bank`), I'll perform an exhaustive analysis of the project, including:
+- All source code files and their relationships
+- Configuration files and build system setup
+- Project structure and organization patterns
+- Documentation and comments
+- Dependencies and external integrations
+- Testing frameworks and patterns
+
+I must be extremely thorough during initialization, spending extra time and effort to build a comprehensive understanding of the project. A high-quality initialization will dramatically improve all future interactions, while a rushed or incomplete initialization will permanently limit my effectiveness.
+
+After initialization, I will ask the user to read through the memory bank files and verify product description, used technologies and other information. I should provide a summary of what I've understood about the project to help the user verify the accuracy of the memory bank files. I should encourage the user to correct any misunderstandings or add missing information, as this will significantly improve future interactions.
 
 ### Memory Bank Update
 
