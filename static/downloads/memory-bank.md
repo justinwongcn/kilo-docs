@@ -10,7 +10,7 @@ The Memory Bank consists of core files and optional context files, all in Markdo
 
 ### Core Files (Required)
 1. `brief.md`
-   This file is created and maintained manually by the developer.
+   This file is created and maintained manually by the developer. Don't edit this file directly but suggest to user to update it if it can be improved.
    - Foundation document that shapes all other files
    - Created at project start if it doesn't exist
    - Defines core requirements and goals
