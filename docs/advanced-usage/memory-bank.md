@@ -9,6 +9,14 @@
   </figcaption>
 </figure>
 
+### The Problem: AI Memory Loss
+
+AI assistants like Kilo Code face a fundamental limitation: they reset completely between sessions. This "memory loss" means that every time you start a new conversation, you need to re-explain your project's architecture, goals, technologies, and current status. This creates a critical efficiency dilemma: AI models either make edits without proper project understanding (leading to errors and misaligned solutions), or must spend significant time and resources analyzing your entire codebase in each session (which is prohibitively expensive and slow for larger projects)
+
+Without a solution to this memory problem, AI assistants remain powerful but stateless tools that can't truly function as persistent development partners.
+
+### The Solution: Memory Bank
+
 Memory Bank is a system of structured documentation that enables Kilo Code to **better understand your project** and **maintain context across coding sessions**. It transforms your AI assistant from a stateless tool into a persistent development partner with perfect recall of your project details. Kilo Code automatically reads your Memory Bank files to rebuild its understanding of your project whenever you start a new session.
 
 When Memory Bank is active, Kilo Code begins each task with `[Memory Bank: Active]` and a brief summary of your project context, ensuring consistent understanding without repetitive explanations.
@@ -38,6 +46,8 @@ Files are organized in a hierarchical structure that builds a complete picture o
 - Core requirements and goals
 
 Example: *"Building a React web app for inventory management with barcode scanning. The system needs to support multiple warehouses and integrate with our existing ERP system."*
+
+Note: Kilo Code will not edit this file directly but may suggest improvements if it identifies ways to enhance your project brief.
 
 ### product.md
 - Explains why the project exists
