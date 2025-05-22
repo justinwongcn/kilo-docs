@@ -94,6 +94,15 @@ Create additional files as needed to organize:
 
 These additional files help organize more detailed information that doesn't fit neatly into the core files.
 
+### tasks.md
+*Optional file for documenting repetitive tasks*
+- Stores workflows for tasks that follow similar patterns
+- Documents which files need to be modified
+- Captures step-by-step procedures
+- Records important considerations and gotchas
+
+Example: Adding support for new AI models, implementing API endpoints, or any task that requires doing similar jobs repeatedly.
+
 ## Getting Started with Memory Bank
 
 ### First-Time Setup
@@ -167,10 +176,26 @@ At the beginning of every task, Kilo Code:
 
 At the end of a task, Kilo Code may suggest updating the memory bank if significant changes were made, using the phrase: "Would you like me to update memory bank to reflect these changes?"
 
+#### Add Task Workflow
+
+When you complete a repetitive task that follows a similar pattern each time, you can document it for future reference. This is particularly useful for tasks like adding features that follow existing patterns
+
+To document a task, use the command `add task` or `store this as a task`. Kilo Code will:
+1. Create or update the `tasks.md` file in the memory bank folder
+2. Document the task using current context:
+   - Task name and description
+   - List of files that need to be modified
+   - Step-by-step workflow
+   - Important considerations
+   - Example implementation
+
+When starting a new task, Kilo Code will check if it matches any documented tasks and follow the established workflow to ensure no steps are missed.
+
 ### Key Commands
 
 - `initialize memory bank` - Use when starting a new project
 - `update memory bank` - Initiates a comprehensive re-analysis of the contextual documentation for the current task. **Caution:** This is resource-intensive and not recommended for "lightweight" models due to potentially reduced effectiveness. Can be used multiple times, well combinable with specific instructions, e.g. `update memory bank using information from @/Makefile`
+- `add task` or `store this as a task` - Documents a repetitive task for future reference
 
 ### Status Indicators
 

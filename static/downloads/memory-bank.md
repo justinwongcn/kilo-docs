@@ -45,6 +45,7 @@ The Memory Bank consists of core files and optional context files, all in Markdo
 
 ### Additional Files
 Create additional files/folders within memory-bank/ when they help organize:
+- `tasks.md` - Documentation of repetitive tasks and their workflows
 - Complex feature documentation
 - Integration specifications
 - API documentation
@@ -88,12 +89,60 @@ To execute Memory Bank update, I will:
 
 Note: When triggered by **update memory bank**, I MUST review every memory bank file, even if some don't require updates. Focus particularly on context.md as it tracks current state.
 
+### Add Task
+
+When user completes a repetitive task (like adding support for a new model version) and wants to document it for future reference, they can request: **add task** or **store this as a task**.
+
+This workflow is designed for repetitive tasks that follow similar patterns and require editing the same files. Examples include:
+- Adding support for new AI model versions
+- Implementing new API endpoints following established patterns
+- Adding new features that follow existing architecture
+
+Tasks are stored in the file `tasks.md` in the memory bank folder. The file is optional an can be empty. The file can store many tasks. 
+
+To execute Add Task workflow:
+
+1. Create or update `tasks.md` in the memory bank folder
+2. Document the task with:
+   - Task name and description
+   - Files that need to be modified
+   - Step-by-step workflow followed
+   - Important considerations or gotchas
+   - Example of the completed implementation
+3. Include any context that was discovered during task execution but wasn't previously documented
+
+Example task entry:
+```markdown
+## Add New Model Support
+**Last performed:** [date]
+**Files to modify:**
+- `/providers/gemini.md` - Add model to documentation
+- `/src/providers/gemini-config.ts` - Add model configuration
+- `/src/constants/models.ts` - Add to model list
+- `/tests/providers/gemini.test.ts` - Add test cases
+
+**Steps:**
+1. Add model configuration with proper token limits
+2. Update documentation with model capabilities
+3. Add to constants file for UI display
+4. Write tests for new model configuration
+
+**Important notes:**
+- Check Google's documentation for exact token limits
+- Ensure backward compatibility with existing configurations
+- Test with actual API calls before committing
+```
+
 ### Regular Task Execution
 
 In the beginning of EVERY task I MUST read ALL memory bank files - this is not optional. The memory bank files are located in `.kilocode/rules/memory-bank` folder. If the folder doesn't exist or is empty, I will warn user about potential issues with the memory bank.
 
 After reading the memory bank, I should briefly summarize my understanding of the project to confirm alignment with the user's expectations, like:
 "[Memory Bank: Active] I understand we're building a React inventory system with barcode scanning. Currently implementing the scanner component that needs to work with the backend API."
+
+When starting a task that matches a documented task in `tasks.md`, I should mention this and follow the documented workflow to ensure no steps are missed.
+
+If the task was repetitive and might be needed again, I should suggest: "Would you like me to add this task to the memory bank for future reference?"
 
 In the end of the task, when it seems to be completed, I will update `context.md` accordingly. If the change seems significant, I will suggest to the user: "Would you like me to update memory bank to reflect these changes?" I will not suggest updates for minor changes.
 
