@@ -1,30 +1,30 @@
-# Custom Modes
+# 自定义模式
 
-Kilo Code allows you to create **custom modes** to tailor Kilo's behavior to specific tasks or workflows. Custom modes can be either **global** (available across all projects) or **project-specific** (defined within a single project).
+Kilo Code 允许您创建**自定义模式**，以根据特定任务或工作流调整 Kilo 的行为。自定义模式可以是**全局**（适用于所有项目）或**项目特定**（在单个项目中定义）。
 
-## Why Use Custom Modes?
+## 为什么要使用自定义模式？
 
-*   **Specialization:** Create modes optimized for specific tasks, like "Documentation Writer," "Test Engineer," or "Refactoring Expert"
-*   **Safety:** Restrict a mode's access to sensitive files or commands. For example, a "Review Mode" could be limited to read-only operations
-*   **Experimentation:** Safely experiment with different prompts and configurations without affecting other modes
-*   **Team Collaboration:** Share custom modes with your team to standardize workflows
+*   **专业化：** 创建针对特定任务优化的模式，例如“文档编写器”、“测试工程师”或“重构专家”
+*   **安全：** 限制模式对敏感文件或命令的访问。例如，“审查模式”可以限制为只读操作
+*   **实验：** 安全地尝试不同的提示和配置，而不会影响其他模式
+*   **团队协作：** 与您的团队共享自定义模式以标准化工作流
 
-    <img src="/docs/img/custom-modes/custom-modes.png" alt="Overview of custom modes interface" width="400" />
-    *Kilo Code's interface for creating and managing custom modes.*
+    <img src="/docs/img/custom-modes/custom-modes.png" alt="自定义模式界面概述" width="400" />
+    *Kilo Code 用于创建和管理自定义模式的界面。*
 
-## What's Included in a Custom Mode?
+## 自定义模式中包含什么？
 
-Custom modes allow you to define:
+自定义模式允许您定义：
 
-*   **A unique name and slug:** For easy identification
-*   **A role definition:** Placed at the beginning of the system prompt, this defines Kilo's core expertise and personality for the mode. This placement is crucial as it shapes Kilo's fundamental understanding and approach to tasks
-*   **Custom instructions:** Added at the end of the system prompt, these provide specific guidelines that modify or refine Kilo's behavior. Unlike `.clinerules` files (which only add rules at the end), this structured placement of role and instructions allows for more nuanced control over Kilo's responses
-*   **Allowed tools:** Which Kilo Code tools the mode can use (e.g., read files, write files, execute commands)
-*   **File restrictions:** (Optional) Limit file access to specific file types or patterns (e.g., only allow editing `.md` files)
+*   **唯一的名称和 slug：** 便于识别
+*   **角色定义：** 放置在系统提示的开头，这定义了 Kilo 在该模式下的核心专业知识和个性。此位置至关重要，因为它塑造了 Kilo 对任务的基本理解和方法
+*   **自定义指令：** 放置在系统提示的末尾，这些指令提供了修改或完善 Kilo 行为的特定指南。与 `.clinerules` 文件（仅在末尾添加规则）不同，这种角色和指令的结构化放置允许对 Kilo 的响应进行更细致的控制
+*   **允许的工具：** 该模式可以使用的 Kilo Code 工具（例如，读取文件、写入文件、执行命令）
+*   **文件限制：** （可选）将文件访问限制为特定文件类型或模式（例如，仅允许编辑 `.md` 文件）
 
-## Custom Mode Configuration (JSON Format)
+## 自定义模式配置（JSON 格式）
 
-Both global and project-specific configurations use the same JSON format. Each configuration file contains a `customModes` array of mode definitions:
+全局和项目特定配置都使用相同的 JSON 格式。每个配置文件都包含一个模式定义数组 `customModes`：
 
 ```json
 {
@@ -40,30 +40,30 @@ Both global and project-specific configurations use the same JSON format. Each c
 }
 ```
 
-### Required Properties
+### 必需属性
 
 #### `slug`
-* A unique identifier for the mode
-* Use lowercase letters, numbers, and hyphens
-* Keep it short and descriptive
-* Example: `"docs-writer"`, `"test-engineer"`
+* 模式的唯一标识符
+* 使用小写字母、数字和连字符
+* 保持简短和描述性
+* 示例：`"docs-writer"`, `"test-engineer"`
 
 #### `name`
-* The display name shown in the UI
-* Can include spaces and proper capitalization
-* Example: `"Documentation Writer"`, `"Test Engineer"`
+* 在 UI 中显示的名称
+* 可以包含空格和正确的大小写
+* 示例：`"Documentation Writer"`, `"Test Engineer"`
 
 #### `roleDefinition`
-* Detailed description of the mode's role and capabilities
-* Defines Kilo's expertise and personality for this mode
-* Example: `"You are a technical writer specializing in clear documentation"`
+* 模式角色和功能的详细描述
+* 定义 Kilo 在此模式下的专业知识和个性
+* 示例：`"您是一位专注于清晰文档的技术作家"`
 
 #### `groups`
-* Array of allowed tool groups
-* Available groups: `"read"`, `"edit"`, `"browser"`, `"command"`, `"mcp"`
-* Can include file restrictions for the `"edit"` group
+* 允许的工具组数组
+* 可用组：`"read"`, `"edit"`, `"browser"`, `"command"`, `"mcp"`
+* 可以包含文件限制 for the `"edit"` group
 
-##### File Restrictions Format
+##### 文件限制格式
 ```json
 ["edit", {
   "fileRegex": "\\.md$",
@@ -71,7 +71,7 @@ Both global and project-specific configurations use the same JSON format. Each c
 }]
 ```
 
-### Understanding File Restrictions
+### 理解文件限制
 
 The `fileRegex` property uses regular expressions to control which files a mode can edit:
 
@@ -184,12 +184,12 @@ Each example shows different aspects of mode configuration:
   "customModes": [{
     "slug": "docs-writer",
     "name": "Documentation Writer",
-    "roleDefinition": "You are a technical writer specializing in clear documentation",
+    "roleDefinition": "您是一位专注于清晰文档的技术作家",
     "groups": [
       "read",
       ["edit", { "fileRegex": "\\.md$", "description": "Markdown files only" }]
     ],
-    "customInstructions": "Focus on clear explanations and examples"
+    "customInstructions": "专注于清晰的解释和示例"
   }]
 }
 ```
@@ -199,8 +199,8 @@ Each example shows different aspects of mode configuration:
 {
   "customModes": [{
     "slug": "test-engineer",
-    "name": "Test Engineer",
-    "roleDefinition": "You are a test engineer focused on code quality",
+    "name": "测试工程师",
+    "roleDefinition": "您是一位专注于代码质量的测试工程师",
     "groups": [
       "read",
       ["edit", { "fileRegex": "\\.(test|spec)\\.(js|ts)$", "description": "Test files only" }]
@@ -214,13 +214,13 @@ Each example shows different aspects of mode configuration:
 {
   "customModes": [{
     "slug": "code",
-    "name": "Code (Project-Specific)",
-    "roleDefinition": "You are a software engineer with project-specific constraints",
+    "name": "代码（项目特定）",
+    "roleDefinition": "您是一位具有项目特定约束的软件工程师",
     "groups": [
       "read",
       ["edit", { "fileRegex": "\\.(js|ts)$", "description": "JS/TS files only" }]
     ],
-    "customInstructions": "Focus on project-specific JS/TS development"
+    "customInstructions": "专注于项目特定的 JS/TS 开发"
   }]
 }
 ```
@@ -240,7 +240,7 @@ When you specify `fileRegex` in a custom mode, you're creating a pattern that fi
 
 ### Important Rules
 
-- **Double Backslashes:** In JSON, backslashes must be escaped with another backslash. So `\.md$` becomes `\\.md$`
+- **Double Backslashes:** In JSON, backslashes must be escaped with another backslash. So `\\.md$` becomes `\\.md$`
 - **Path Matching:** Patterns match against the full file path, not just the filename
 - **Case Sensitivity:** Regex patterns are case-sensitive by default
 

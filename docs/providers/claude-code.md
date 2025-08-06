@@ -2,46 +2,46 @@
 sidebar_label: Claude Code
 ---
 
-# Using Claude Code With Kilo Code
+# 在 Kilo Code 中使用 Claude Code
 
-Claude Code is Anthropic's official CLI that provides direct access to Claude models from your terminal. Using Claude Code with Kilo Code lets you leverage your existing CLI setup without needing separate API keys.
+Claude Code 是 Anthropic 的官方 CLI，它提供从终端直接访问 Claude 模型的功能。在 Kilo Code 中使用 Claude Code 可以让您利用现有的 CLI 设置，而无需单独的 API 密钥。
 
-**Website:** [https://docs.anthropic.com/en/docs/claude-code/setup](https://docs.anthropic.com/en/docs/claude-code/setup)
+**网站：** [https://docs.anthropic.com/en/docs/claude-code/setup](https://docs.anthropic.com/en/docs/claude-code/setup)
 
-## Installing and Setting Up Claude Code
+## 安装和设置 Claude Code
 
-1. **Install Claude Code:** Follow the installation instructions at [Anthropic's Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/setup).
-2. **Authenticate:** Run `claude` in your terminal. Claude Code offers multiple authentication options including the Anthropic Console (default), Claude App with Pro/Max plans, and enterprise platforms like Amazon Bedrock or Google Vertex AI. See [Anthropic's authentication documentation](https://docs.anthropic.com/en/docs/claude-code/setup) for complete details.
-3. **Verify Installation:** Test that everything works by running `claude --version` in your terminal.
+1.  **安装 Claude Code：** 按照 [Anthropic 的 Claude Code 文档](https://docs.anthropic.com/en/docs/claude-code/setup)中的安装说明进行操作。
+2.  **身份验证：** 在终端中运行 `claude`。Claude Code 提供多种身份验证选项，包括 Anthropic Console（默认）、带有 Pro/Max 计划的 Claude App 以及 Amazon Bedrock 或 Google Vertex AI 等企业平台。有关完整详细信息，请参阅 [Anthropic 的身份验证文档](https://docs.anthropic.com/en/docs/claude-code/setup)。
+3.  **验证安装：** 在终端中运行 `claude --version` 以测试一切是否正常。
 
-## Supported Models
+## 支持的模型
 
-Kilo Code supports the following Claude models through Claude Code:
+Kilo Code 通过 Claude Code 支持以下 Claude 模型：
 
-*   `claude-sonnet-4` (Recommended)
+*   `claude-sonnet-4`（推荐）
 *   `claude-4-opus`
 
-The specific models available depend on your Claude subscription and plan. See [Anthropic's Model Documentation](https://docs.anthropic.com/en/docs/about-claude/models) for more details on each model's capabilities.
+可用的特定模型取决于您的 Claude 订阅和计划。有关每个模型功能的更多详细信息，请参阅 [Anthropic 的模型文档](https://docs.anthropic.com/en/docs/about-claude/models)。
 
-## Configuration in Kilo Code
+## Kilo Code 中的配置
 
-1. **Open Kilo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Kilo Code panel.
-2. **Select Provider:** Choose "Claude Code" from the "API Provider" dropdown.
-3. **Select Model:** Choose your desired Claude model from the "Model" dropdown.
-4. **(Optional) Custom CLI Path:** If you installed Claude Code to a location other than the default `claude` command, enter the full path to your Claude executable in the "Claude Code Path" field. Most users won't need to change this.
+1.  **打开 Kilo Code 设置：** 单击 Kilo Code 面板中的齿轮图标（<Codicon name="gear" />）。
+2.  **选择提供商：** 从“API 提供商”下拉菜单中选择“Claude Code”。
+3.  **选择模型：** 从“模型”下拉菜单中选择您想要的 Claude 模型。
+4.  **（可选）自定义 CLI 路径：** 如果您将 Claude Code 安装到默认 `claude` 命令以外的位置，请在“Claude Code 路径”字段中输入 Claude 可执行文件的完整路径。大多数用户不需要更改此项。
 
-## Tips and Notes
+## 提示和注意事项
 
-*   **No API Keys Required:** Claude Code uses your existing CLI authentication, so you don't need to manage separate API keys.
-*   **Cost Transparency:** Usage costs are reported directly by the Claude CLI, giving you clear visibility into your spending.
-*   **Advanced Reasoning:** Full support for Claude's thinking modes and reasoning capabilities when available.
-*   **Context Windows:** Claude models have large context windows, allowing you to include significant amounts of code and context in your prompts.
-*   **Enhance Prompt Feature:** Full compatibility with Kilo Code's Enhance Prompt feature, allowing you to automatically improve and refine your prompts before sending them to Claude.
-*   **Custom Paths:** If you installed Claude Code in a non-standard location, you can specify the full path in the settings. Examples:
-    *   Windows: `C:\tools\claude\claude.exe`
-    *   macOS/Linux: `/usr/local/bin/claude` or `~/bin/claude`
+*   **无需 API 密钥：** Claude Code 使用您现有的 CLI 身份验证，因此您无需管理单独的 API 密钥。
+*   **成本透明：** 使用成本由 Claude CLI 直接报告，让您清楚地了解您的支出。
+*   **高级推理：** 完全支持 Claude 的思考模式和推理功能（如果可用）。
+*   **上下文窗口：** Claude 模型具有大型上下文窗口，允许您在提示中包含大量代码和上下文。
+*   **增强提示功能：** 完全兼容 Kilo Code 的增强提示功能，允许您在将提示发送到 Claude 之前自动改进和优化提示。
+*   **自定义路径：** 如果您将 Claude Code 安装在非标准位置，您可以在设置中指定完整路径。示例：
+    *   Windows：`C:\tools\claude\claude.exe`
+    *   macOS/Linux：`/usr/local/bin/claude` 或 `~/bin/claude`
 
-## Troubleshooting
+## 故障排除
 
-*   **"Claude Code process exited with error":** Verify Claude Code is installed (`claude --version`) and authenticated (`claude auth login`). Make sure your subscription includes the selected model.
-*   **Custom path not working:** Use the full absolute path to the Claude executable and verify the file exists and is executable. On Windows, include the `.exe` extension.
+*   **“Claude Code 进程退出并出现错误”：** 验证 Claude Code 是否已安装（`claude --version`）并已通过身份验证（`claude auth login`）。确保您的订阅包含所选模型。
+*   **自定义路径不起作用：** 使用 Claude 可执行文件的完整绝对路径，并验证文件是否存在且可执行。在 Windows 上，包含 `.exe` 扩展名。

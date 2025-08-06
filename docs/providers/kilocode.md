@@ -2,61 +2,61 @@
 sidebar_label: Kilo Code Provider
 ---
 
-# Using Kilo Code's Built-in Provider
+# 使用 Kilo Code 的 API 提供商
 
-Kilo Code provides its own built-in API provider that gives you access to the latest frontier coding models through a simple registration process. No need to manage API keys from multiple providers - just sign up and start coding.
+Kilo Code 提供自己的内置 API 提供商，通过简单的注册过程即可访问最新的前沿编码模型。无需管理来自多个提供商的 API 密钥——只需注册即可开始编码。
 
-**Website:** [https://kilocode.ai/](https://kilocode.ai/)
+**网站：** [https://kilocode.ai/](https://kilocode.ai/)
 
-## Getting Started with Free Credits
+## 免费积分入门
 
-When you sign up for Kilo Code, you'll receive free credits to help you get started:
+当您注册 Kilo Code 时，您将获得免费积分以帮助您入门：
 
-1. **Initial Registration:** Complete the registration process to receive an initial amount of free credits immediately
-2. **Unlock Additional Credits:** To access more free credits:
-   * Add a payment method for identity verification
-   * Authorize a temporary $10 hold on your card (not a charge)
-3. **Start Coding:** Once verified, enjoy your free tokens and start using Kilo Code right away
+1.  **初始注册：** 完成注册过程，立即获得初始数量的免费积分
+2.  **解锁额外积分：** 要访问更多免费积分：
+    *   添加支付方式以进行身份验证
+    *   授权临时冻结您的卡 10 美元（不收费）
+3.  **开始编码：** 验证后，立即享受您的免费 token 并开始使用 Kilo Code
 
-:::note About the temporary hold
-The $10 hold is for identity verification only:
-- **Not a charge** - This is a temporary authorization that will not be charged
-- **Released after 7 days** - Kilo Code releases the hold automatically
-- **Bank processing** - After release, it may take 5-10 business days for funds to return (varies by bank)
-- **Tracking available** - We can provide a STAN number to help track with your bank if needed
+:::note 关于临时冻结
+10 美元的冻结仅用于身份验证：
+- **不收费** - 这是一项临时授权，不会收费
+- **7 天后解除** - Kilo Code 会自动解除冻结
+- **银行处理** - 解除后，资金可能需要 5-10 个工作日才能返回（因银行而异）
+- **可追踪** - 如果需要，我们可以提供 STAN 号码以帮助银行追踪
 :::
 
-## Registration Process
+## 注册流程
 
-Kilo Code offers a streamlined registration that connects you directly to frontier coding models:
+Kilo Code 提供简化的注册流程，可将您直接连接到前沿编码模型：
 
-1. **Start Registration:** Click "Try Kilo Code for Free" in the extension
-2. **Sign In:** Use your Google account to sign in at kilocode.ai
-3. **Authorize VS Code:**
-   * kilocode.ai will prompt you to open Visual Studio Code
-   * For web-based IDEs, you'll copy the API key manually instead
-4. **Complete Setup:** Allow VS Code to open the authorization URL when prompted
+1.  **开始注册：** 在扩展中单击“免费试用 Kilo Code”
+2.  **登录：** 使用您的 Google 帐户在 kilocode.ai 登录
+3.  **授权 VS Code：**
+    *   kilocode.ai 将提示您打开 Visual Studio Code
+    *   对于基于 Web 的 IDE，您将手动复制 API 密钥
+4.  **完成设置：** 提示时允许 VS Code 打开授权 URL
 
-<!-- <img src="/img/setting-up/signupflow.gif" alt="Sign up and registration flow with Kilo Code" width="600" /> -->
+<!-- <img src="/img/setting-up/signupflow.gif" alt="Kilo Code 的注册流程" width="600" /> -->
 
-## Supported Models
+## 支持的模型
 
-Kilo Code provides access to the latest frontier coding models through its built-in provider. The specific models available are automatically updated and managed by the Kilo Code service, ensuring you always have access to the most capable models for coding tasks.
+Kilo Code 通过其内置提供商提供对最新前沿编码模型的访问。可用的特定模型由 Kilo Code 服务自动更新和管理，确保您始终可以访问最强大的编码任务模型。
 
-## Configuration in Kilo Code
+## Kilo Code 中的配置
 
-Once you've completed the registration process, Kilo Code is automatically configured:
+完成注册过程后，Kilo Code 会自动配置：
 
-1. **Automatic Setup:** After successful registration, Kilo Code is ready to use immediately
-2. **No API Key Management:** Your authentication is handled seamlessly through the registration process
-3. **Model Selection:** Access to frontier models is provided automatically through your Kilo Code account
+1.  **自动设置：** 成功注册后，Kilo Code 即可立即使用
+2.  **无需 API 密钥管理：** 您的身份验证通过注册过程无缝处理
+3.  **模型选择：** 通过您的 Kilo Code 帐户自动提供对前沿模型的访问
 
-## Tips and Notes
+## 提示和注意事项
 
-* **Free Credits:** New users receive free credits to explore Kilo Code's capabilities
-* **Identity Verification:** The temporary hold system ensures service reliability while preventing misuse
-* **Seamless Integration:** No need to manage multiple API keys or provider configurations
-* **Latest Models:** Automatic access to the most current frontier coding models
-* **Support Available:** Contact [hi@kilocode.ai](mailto:hi@kilocode.ai) for questions about pricing or tokens
+*   **免费积分：** 新用户获得免费积分以探索 Kilo Code 的功能
+*   **身份验证：** 临时冻结系统确保服务可靠性，同时防止滥用
+*   **无缝集成：** 无需管理多个 API 密钥或提供商配置
+*   **最新模型：** 自动访问最新的前沿编码模型
+*   **提供支持：** 有关定价或 token 的问题，请联系 [hi@kilocode.ai](mailto:hi@kilocode.ai)
 
-For detailed setup instructions, see [Setting up Kilo Code](/getting-started/setting-up).
+有关详细设置说明，请参阅[设置 Kilo Code](/getting-started/setting-up)。
