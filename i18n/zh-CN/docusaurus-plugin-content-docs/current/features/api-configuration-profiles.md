@@ -79,7 +79,7 @@ API 配置下拉菜单现在支持固定您喜欢的配置文件，以便更快�
 观看此演示，了解如何将配置配置文件与特定模式连接以优化工作流：
 
 <video width="600" controls>
-  <source src="/img/api-configuration-profiles/provider-modes.mp4" type="video/mp4" />
+  <source src="/docs/api-configuration-profiles/provider-modes.mp4" type="video/mp4" />
   您的浏览器不支持此视频标签。
 </video>
 
