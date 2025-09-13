@@ -13,129 +13,86 @@ Kilo Code 支持通过 Ollama 在本地运行模型。这提供了隐私保护�
 
 ## 管理期望
 
-本地 LLM 比高级云托管 LLM（如 Claude 和 Gemini）小得多，结果也会逊色得多。
-它们更容易陷入循环，无法正确使用工具或在代码中产生语法错误。
-需要更多的试错才能找到正确的提示。
-本地 LLM 通常速度也不是很快。
-使用简单的提示、保持对话简短和禁用 MCP 工具可以提高速度。
-
+The LLMs that can be run locally are generally much smaller than cloud-hosted LLMs such as Claude and GPT and the results will be much less impressive.
+They are much more likely to get stuck in loops, fail to use tools properly or produce syntax errors in code.
+More trial and error will be required to find the right prompt.
+Running LLMs locally is often also not very fast.
+Using simple prompts, keeping conversations short and disabling MCP tools can result in a speed-up.
 
 ## 硬件要求
 
-您将需要大量的 RAM（32GB 或更多）和强大的 CPU（例如 Ryzen 9000 系列）才能运行下面列出的模型。
-GPU 可以更快地运行 LLM，但需要大量的 VRAM（24GB 或更多），这在消费级 GPU 上并不常见。
-较小的模型可以在更普通的 GPU 上运行，但效果不佳。
-具有足够统一内存的 MacBook 可以使用 GPU 加速，但在我们的测试中，其性能不如高端桌面 CPU。
-
+You will need a GPU with a large amount of VRAM (24GB or more) or a MacBook with a large amount of unified RAM (32GB or more) to run the models discussed below at decent speed.
 
 ## 选择模型
 
-Ollama 支持许多不同的模型。
-您可以在 [Ollama 网站](https://ollama.com/library)上找到可用模型列表。
-选择适合您的用例、在您的硬件配置上运行并达到所需速度的模型需要一些试错。
-以下规则和启发式方法可用于查找模型：
+Ollama supports many different models.
+You can find a list of available models on the [Ollama website](https://ollama.com/library).
 
-*   必须至少有 32k 的上下文窗口（这是 Kilo Code 的要求）。
-*   列出为支持工具。
-*   参数数量在 7b 到 24b 范围内。
-*   优先选择流行模型。
-*   优先选择较新的模型。
+For the Kilo Code agent the current recommendation is `qwen3-coder:30b`. `qwen3-coder:30b` sometimes fails to call tools correctly (it is much more likely to have this problem than the full `qwen3-coder:480b` model). As a mixture-of-experts model, this could be because it activated the wrong experts. Whenever this happens, try changing your prompt or use the Enhance Prompt button.
 
-
-### Kilo Code 推荐
-
-我们使用以下提示测试了一些模型：
-
-```
-创建一个简单的网页，其中包含一个按钮，单击时会向用户问好。
-```
-
-如果模型在几次尝试内产生了一个可用的结果，则认为它通过。我们发现可以正常工作的模型是：
-
-| 模型名称 | 完成时间 |
-| --- | --- |
-| qwen2.5-coder:7b | 1x（基线） |
-| devstral:24b | 2x |
-| gemma3:12b | 4x |
-| qwen3-8b | 12x |
-
-我们的建议是，如果您的硬件能够处理，请使用 **devstral:24b**，因为它比 qwen2.5-coder:7b 犯的错误更少。
-qwen2.5-coder:7b 值得考虑，因为它速度快，如果您能忍受它的错误。
-该表还显示速度难以预测，因为专用 devstral:24b 在这里优于较小的通用模型 gemma3:12b 和 qwen3-8b。
-gemma3:12b 的结果引人注目，因为它能够正确使用工具（至少有时），而 Ollama 网站上并未将其列为适合工具使用的模型。
-
-devstral:24b 产生的结果如下：
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>问候用户按钮</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <button onclick="greetUser()">问候我！</button>
-
-    <script>
-        function greetUser() {
-            alert('你好！欢迎来到我们的网站。');
-        }
-    </script>
-</body>
-</html>
-```
-
-以下模型看起来是合理的选择，但发现与 Kilo Code 的默认配置**不**兼容：
-
-| 模型名称 | 失败原因 |
-| --- | --- |
-| deepseek-r1:7b | 无法正确使用工具 |
-| deepseek-r1:8b | 陷入推理循环 |
-
+An alternative to `qwen3-coder:30b` is `devstral:24b`. For other features of Kilo Code such as Enhance Prompt or Commit Message Generation smaller models may suffice.
 
 ## 设置 Ollama
 
-1.  **下载并安装 Ollama：** 从 [Ollama 网站](https://ollama.com/)为你的操作系统下载 Ollama 安装程序。按照安装说明操作，以确保 Ollama 正在运行：
+To set up Ollama for use with Kilo Code, follow the instructions below.
 
-    ```bash
-    ollama serve
-    ```
+### Download and Install Ollama
 
-2.  **下载模型：** 下载模型后，您可以离线使用 Kilo Code 和该模型。要下载模型，请打开终端并运行：
+Download the Ollama installer from the [Ollama website](https://ollama.com/) (or use the package manager for your operating system). Follow the installation instructions, then make sure Ollama is running:
 
-    ```bash
-    ollama pull <model_name>
-    ```
+```bash
+ollama serve
+```
 
-    例如：
+### Download a Model
 
-    ```bash
-    ollama pull devstral:24b
-    ```
+To download a model, open a second terminal (`ollama serve` needs to be running) and run:
 
-4.  **配置 Kilo Code：**
-    *   打开 Kilo Code 侧边栏（<img src="/docs/img/kilo-v1.svg" width="12" /> 图标）。
-    *   单击设置齿轮图标（<Codicon name="gear" />）。
-    *   选择“ollama”作为 API 提供商。
-    *   输入模型名称。
-    *   （可选）如果您在不同的机器上运行 Ollama，则可以配置基本 URL。默认值为 `http://localhost:11434`。
+```bash
+ollama pull <model_name>
+```
 
+For example:
+
+```bash
+ollama pull qwen3-coder:30b
+```
+
+### Configure the Context Size
+
+By default Ollama truncates prompts to a very short length, [as documented here](https://github.com/ollama/ollama/blob/4383a3ab7a075eff78b31f7dc84c747e2fcd22b8/docs/faq.md#how-can-i-specify-the-context-window-size).
+
+You need to have at least 32k to get decent results, but increasing the context size increases memory usage and may decrease performance, depending on your hardware.
+To configure a model, you need to set its parameters and save a copy of it.
+
+Load the model (we will use `qwen3-coder:30b` as an example):
+
+```bash
+ollama run qwen3-coder:30b
+```
+
+Change context size parameter:
+
+```bash
+/set parameter num_ctx 32768
+```
+
+Save the model with a new name:
+
+```bash
+/save qwen3-coder-30b-c32k
+```
+
+You can also set the `OLLAMA_CONTEXT_LENGTH` environment variable,
+but this is not recommended as it changes the context for all models and the environment variable needs to be visible to both the Ollama server and the IDE.
+
+### Configure Kilo Code
+
+- Open the Kilo Code sidebar (<img src="/docs/img/kilo-v1.svg" width="12" /> icon).
+- Click the Settings gear icon (<Codicon name="gear" />).
+- Select "Ollama" as the API Provider.
+- Select the model configured in the previous step.
+- (Optional) You can configure the base URL if you're running Ollama on a different machine. The default is `http://localhost:11434`.
 
 ## 进一步阅读
 

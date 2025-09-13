@@ -10,11 +10,11 @@ Kilo Code 提供自己的内置 API 提供商，通过简单的注册过程即�
 
 ## 免费积分入门
 
-当你注册 Kilo Code 时，你将获得免费积分以帮助你入门：
+When you sign up for Kilo Code, you may receive free credits to help you get started:
 
-1. **注册：** 完成注册流程，在验证后立即获得 5 美元信用额度（我们可能需要进行身份验证的临时冻结）
-2. **首次充值：** 向你的账户增加资金（最低 5 美元）并获得 20 美元奖励信用额度
-3. **开始编码：** 享受总共 25 美元的免费信用额度
+1. **Sign up:** Complete the registration (we might require a hold to verify identity)
+2. **First top-up:**: Add funds to your account (min $5) and get $20 bonus credits
+3. **Start Coding:** Enjoy your free credits
 
 :::note 关于临时冻结
 0.50 美元的冻结仅用于身份验证：
@@ -31,8 +31,8 @@ Kilo Code 提供简化的注册流程，可将你直接连接到前沿编码模�
 1. **开始注册：** 在扩展中点击"免费试用 Kilo Code"
 2. **登录：** 在 kilocode.ai 使用你的 Google 账户登录
 3. **授权 VS Code：**
-   - kilocode.ai 将提示你打开 Visual Studio Code
-   - 对于基于 Web 的 IDE，你将手动复制 API 密钥
+    - kilocode.ai 将提示你打开 Visual Studio Code
+    - 对于基于 Web 的 IDE，你将手动复制 API 密钥
 4. **完成设置：** 在提示时允许 VS Code 打开授权 URL
 
 <!-- <img src="/img/setting-up/signupflow.gif" alt="Kilo Code 的注册流程" width="600" /> -->

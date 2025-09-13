@@ -2,7 +2,7 @@ import { DISCORD_URL } from '@site/src/constants.ts'
 
 # 添加更多 Tokens
 
-当你用完初始的免费 tokens 后，你可以轻松添加更多：
+Once you've used any initial free tokens, you can easily add more:
 
 - 为你的账户添加信用卡（所有支付均通过 Stripe 安全处理）
 - 我们目前不提供订阅服务，因此你只需为使用的 tokens 付费，并且仅在你选择充值 tokens 时付费！

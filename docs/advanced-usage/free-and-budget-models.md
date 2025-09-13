@@ -8,6 +8,10 @@ sidebar_label: 免费和预算模型
 
 ## 完全免费的选项
 
+### Grok Code Fast 1
+
+This frontier AI model is 100% free in Kilo Code for a limited time. [See the blog post for more details](https://blog.kilocode.ai/p/grok-code-fast-get-this-frontier-ai-model-free).
+
 ### OpenRouter 免费层级模型
 
 OpenRouter 提供了几种具有慷慨免费额度的模型。**注意：** 你需要创建一个免费的 OpenRouter 账户才能访问这些模型。
@@ -239,8 +243,8 @@ OpenRouter 提供了几种具有慷慨免费额度的模型。**注意：** 你�
 1. **创建 OpenRouter 账户** 以获取免费模型
 2. **在 Kilo Code 中配置多个提供商**
 3. **设置 API 配置档案** 以便轻松切换
-5. **在需要时升级到预算模型**
-6. **为复杂工作预留高级模型**
+4. **在需要时升级到预算模型**
+5. **为复杂工作预留高级模型**
 
 ### 推荐的提供商组合
 
