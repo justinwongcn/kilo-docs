@@ -2,11 +2,11 @@
 sidebar_label: 初始设置
 ---
 
-import { DISCORD_URL } from '@site/src/constants.ts'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { DISCORD_URL } from "@site/src/constants.ts";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 export const FreeTierAmount = () => {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return siteConfig.customFields.freeTierAmount;
 };
 
@@ -14,25 +14,32 @@ export const FreeTierAmount = () => {
 
 注册Kilo Code时，你将获得**价值<FreeTierAmount />的免费token**作为启动资源。领取免费token的步骤：
 
-1. 完成注册流程
-2. 立即获得$5或$20的免费token
-3. 要获取完整的<FreeTierAmount />额度，需要验证信用卡信息（仅用于身份验证）
+1. **注册：** 完成注册流程，在验证后立即获得 5 美元信用额度（我们可能需要进行身份验证的临时冻结）
+2. **首次充值：** 向你的账户添加资金（最低 5 美元）并获得 20 美元奖励信用额度
+3. **开始编码：** 享受总计 25 美元的免费信用额度
 
-:::note 关于临时预授权
-为保护社区并确保服务质量，注册时会临时冻结信用卡$10额度。此预授权通常持续一周左右，**不会实际扣款**。此措施旨在防止免费资源滥用，同时确保正常用户获得最佳体验。我们正在努力在未来取消此限制。
-:::
+:::note 关于临时冻结
+0.50 美元的冻结仅用于身份验证：
+
+- **免费** - 这是临时授权，不会被收取费用
+- **即时释放** - Kilo Code 在验证后会立即释放冻结
+- **银行处理** - 虽然我们即时释放，但资金返回可能需要几个工作日（因银行而异）
+  :::
 
 ## 注册流程
 
 Kilo Code提供简单的注册流程，通过你的账号即可使用前沿的编程模型：
 
-1. 在扩展中点击"免费试用Kilo Code"
-2. 使用Google账号登录kilocode.ai
-3. kilocode.ai将提示打开Visual Studio Code
-   * 在网页版IDE中使用时，需要手动复制API密钥
-4. 允许打开VS Code后，还需允许VS Code打开授权URL
+1. 在扩展中点击"免费试用 Kilo Code"
+1. 使用你的 Google 账户登录 kilocode.ai
+1. kilocode.ai 将提示你打开 Visual Studio Code
+   - 当使用浏览器中的 IDE 时，系统会要求你手动复制 API 密钥
+1. 允许打开 VS Code 后，还必须允许 VS Code 打开授权 URL
 
-<img src="/docs/img/setting-up/signupflow.gif" alt="Kilo Code注册流程演示" />
+<img
+  src="/docs/img/setting-up/signupflow.gif"
+  alt="Kilo Code注册流程演示"
+/>
 
 完成！现在可以开始你的[第一个任务](/getting-started/your-first-task)
 

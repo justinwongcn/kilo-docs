@@ -39,7 +39,7 @@ Kilo Code 中的浏览器使用需要使用高级代理模型，并且仅在 Cla
 浏览 http://localhost:3000，滚动到页面底部并检查页脚信息是否正常显示。
 ```
 
-<img src="/docs/img/browser-use/browser-use-1.png" alt="浏览器使用示例" width="300" />
+<img src="/docs/features/KiloCodeBrowser.png" alt="浏览器使用示例" width="300" />
 
 ## 浏览器操作工作原理
 
