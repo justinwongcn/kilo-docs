@@ -5,6 +5,7 @@
 # 在Kilo Code中使用Ollama  
 
 Kilo Code 支持通过 Ollama 在本地运行模型。这提供了隐私保护、离线访问能力，并可能降低成本，但需要更多设置且依赖高性能计算机。  
+
 **官方网站：** [https://ollama.com/](https://ollama.com/)
 
 <img src="/docs/img/providers/ollama-devstral-snake.png" alt="使用 devstral 编写贪吃蛇游戏" width="500" />
@@ -110,10 +111,10 @@ devstral:24b 产生的结果如下：
 
 ## 设置 Ollama
 
-1.  **下载并安装 Ollama：** 从 [Ollama 网站](https://ollama.com/)下载适用于您操作系统的 Ollama 安装程序。按照安装说明进行操作，并*设置 `OLLAMA_CONTEXT_LENGTH` 环境变量*以防止 Ollama 截断提示。确保 Ollama 正在运行：
+1.  **下载并安装 Ollama：** 从 [Ollama 网站](https://ollama.com/)为你的操作系统下载 Ollama 安装程序。按照安装说明操作，以确保 Ollama 正在运行：
 
     ```bash
-    OLLAMA_CONTEXT_LENGTH=131072 ollama serve
+    ollama serve
     ```
 
 2.  **下载模型：** 下载模型后，您可以离线使用 Kilo Code 和该模型。要下载模型，请打开终端并运行：
