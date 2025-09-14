@@ -10,11 +10,11 @@ Kilo Code 提供自己的内置 API 提供商，通过简单的注册过程即�
 
 ## 免费积分入门
 
-When you sign up for Kilo Code, you may receive free credits to help you get started:
+注册 Kilo Code 时，你可能会收到免费积分以帮助你开始使用：
 
-1. **Sign up:** Complete the registration (we might require a hold to verify identity)
-2. **First top-up:**: Add funds to your account (min $5) and get $20 bonus credits
-3. **Start Coding:** Enjoy your free credits
+1. **注册：** 完成注册（我们可能需要临时冻结来验证身份）
+2. **首次充值：** 向账户充值（最低 5 美元）并获得 20 美元奖励积分
+3. **开始编码：** 尽情使用你的免费积分
 
 :::note 关于临时冻结
 0.50 美元的冻结仅用于身份验证：

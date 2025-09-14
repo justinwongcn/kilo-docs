@@ -34,7 +34,7 @@ MCP服务器配置可以在两个级别进行管理：
 
   <img src="/docs/img/using-mcp-in-kilo-code/mcp-installed-config.png" alt="编辑全局 MCP 和编辑项目 MCP 按钮" width="600" />
 
-Both files use a JSON format with a `mcpServers` object containing named server configurations:
+两个文件都使用JSON格式，其中包含一个`mcpServers`对象，该对象包含命名的服务器配置：
 
 ```json
 {
@@ -52,25 +52,25 @@ Both files use a JSON format with a `mcpServers` object containing named server 
 }
 ```
 
-_Example of MCP Server config in Kilo Code (STDIO Transport)_
+_Kilo Code 中的 MCP 服务器配置示例 (STDIO 传输)_
 
-### Understanding Transport Types
+### 了解传输类型
 
-MCP supports three transport types for server communication:
+MCP 支持三种服务器通信的传输类型：
 
-#### STDIO Transport
+#### STDIO 传输
 
-Used for local servers running on your machine:
+用于在你本地机器上运行的本地服务器：
 
-- Communicates via standard input/output streams
-- Lower latency (no network overhead)
-- Better security (no network exposure)
-- Simpler setup (no HTTP server needed)
-- Runs as a child process on your machine
+- 通过标准输入/输出流进行通信
+- 延迟更低（无网络开销）
+- 安全性更好（无网络暴露）
+- 设置更简单（无需 HTTP 服务器）
+- 以子进程形式在你的机器上运行
 
-For more in-depth information about how STDIO transport works, see [STDIO Transport](/features/mcp/server-transports#stdio-transport).
+如需深入了解 STDIO 传输的工作原理，请参阅 [STDIO 传输](/features/mcp/server-transports#stdio-transport)。
 
-STDIO configuration example:
+STDIO 配置示例：
 
 ```json
 {
@@ -88,16 +88,16 @@ STDIO configuration example:
 }
 ```
 
-#### Streamable HTTP Transport
+#### Streamable HTTP传输
 
-Used for remote servers accessed over HTTP/HTTPS:
+用于通过HTTP/HTTPS访问的远程服务器：
 
-- Can be hosted on a different machine
-- Supports multiple client connections
-- Requires network access
-- Allows centralized deployment and management
+- 可以托管在不同的机器上
+- 支持多个客户端连接
+- 需要网络访问
+- 允许集中部署和管理
 
-Streamable HTTP transport configuration example:
+Streamable HTTP传输配置示例：
 
 ```json
 {
@@ -115,21 +115,21 @@ Streamable HTTP transport configuration example:
 }
 ```
 
-#### SSE Transport
+#### SSE 传输
 
-    ⚠️ DEPRECATED: The SSE Transport has been deprecated as of MCP specification version 2025-03-26. Please use the HTTP Stream Transport instead, which implements the new Streamable HTTP transport specification.
+    ⚠️ 已弃用：自 MCP 规范版本 2025-03-26 起，SSE 传输已被弃用。请改用 HTTP 流传输，它实现了新的可流式 HTTP 传输规范。
 
-Used for remote servers accessed over HTTP/HTTPS:
+用于通过 HTTP/HTTPS 访问的远程服务器：
 
-- Communicates via Server-Sent Events protocol
-- Can be hosted on a different machine
-- Supports multiple client connections
-- Requires network access
-- Allows centralized deployment and management
+- 通过服务器发送事件（Server-Sent Events）协议进行通信
+- 可以托管在不同的机器上
+- 支持多个客户端连接
+- 需要网络访问
+- 允许集中部署和管理
 
-For more in-depth information about how SSE transport works, see [SSE Transport](/features/mcp/server-transports#sse-transport).
+如需深入了解 SSE 传输的工作原理，请参阅 [SSE 传输](/features/mcp/server-transports#sse-transport)。
 
-SSE configuration example:
+SSE 配置示例：
 
 ```json
 {

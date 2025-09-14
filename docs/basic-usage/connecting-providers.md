@@ -4,13 +4,13 @@ sidebar_label: Overview
 
 # API 提供商概述
 
-**总结**：Kilo Code，像任何代理 AI 编码工具一样，需要 AI 模型提供商才能运行。您可以使用我们的[内置提供商](/providers/kilocode)（最简单）或连接来自 **30 多个提供商**的您自己的 API 密钥。
+**总结**：Kilo Code，像任何代理 AI 编码工具一样，需要 AI 模型提供商才能运行。你可以使用我们的[内置提供商](/providers/kilocode)（最简单）或连接来自 **30 多个提供商**的你自己的 API 密钥。
 
 ## Kilo Code 扩展与 API 提供商
 
 ### 扩展
 
-- 您从市场安装的 VS Code 工具
+- 你从市场安装的 VS Code 工具
 - 处理 UI、文件操作和工作流管理
 - [开源](https://github.com/Kilo-Org/kilocode)
 - 连接到任何 AI 提供商
@@ -27,23 +27,23 @@ sidebar_label: Overview
 
 ## 入门：两条路径
 
-### Option 1: Built-in Provider (Recommended)
+### 选项 1：内置提供商（推荐）
 
-✅ **Fastest setup**
+✅ **快速设置**
 
-- Sign in with Google or GitHub at kilocode.ai
-- Free credits included for your first top-up
-- Zero API key management
-- Latest models available
+- 在 kilocode.ai 使用 Google 或 GitHub 登录
+- 首次充值包含免费积分
+- 无需 API 密钥管理
+- 可使用最新模型
 
 → [完整设置指南](/providers/kilocode)
 
-### 选项 2：您自己的提供商
+### 选项 2：你自己的提供商
 
 **更多控制，更多设置**
 
 1. 从 30 多个受支持的提供商中选择
-2. 从您的提供商处获取 API 密钥
+2. 从你的提供商处获取 API 密钥
 3. 在 Kilo Code 设置中配置
 
 ## 为什么要使用多个提供商？
@@ -56,14 +56,14 @@ sidebar_label: Overview
 
 ## 本节内容
 
-### [连接您的第一个 AI 提供商](/getting-started/connecting-api-provider)
+### [连接你的第一个 AI 提供商](/getting-started/connecting-api-provider)
 
 **面向初学者**：分步设置，包括：
 
 - 推荐的提供商
 - 如何获取 API 密钥
 - 初始 VS Code 配置
-- 开始您的第一个 AI 聊天
+- 开始你的第一个 AI 聊天
 
 ### [API 配置配置文件](/features/api-configuration-profiles)
 
@@ -76,6 +76,6 @@ sidebar_label: Overview
 
 ## 安全注意事项
 
-所有 API 密钥都使用 VS Code 的 Secret Storage——从不以纯文本形式存储。行业标准的安全实践保护您的凭据。
+所有 API 密钥都使用 VS Code 的 Secret Storage——从不以纯文本形式存储。行业标准的安全实践保护你的凭据。
 
-**准备好开始了吗？** → [连接您的第一个提供商](/getting-started/connecting-api-provider)或跳转到[高级配置文件](/features/api-configuration-profiles)。
+**准备好开始了吗？** → [连接你的第一个提供商](/getting-started/connecting-api-provider)或跳转到[高级配置文件](/features/api-configuration-profiles)。
